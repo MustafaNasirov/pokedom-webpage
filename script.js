@@ -1,24 +1,16 @@
 import { pokemonArray } from './data/pokemon.js'
 
-
-console.log(pokemonArray)
-
-
-/* 
-pokemonArray.forEach(pokemon => {
-    
-}); */
-
-
 const cardContainer = document.querySelector(".card-container")
 
-cardContainer.innerHTML += `<div class="card">
-    <img class="card__image" src=""> </img>
-    <div class="card__content">
-    <h1 class="card__heading"></h1>
-    <p class="card__text"></p>
+pokemonArray.forEach(pokemon => {
+    cardContainer.innerHTML += `
+    <div class="card">
+        <img class="card__image" src="${pokemon.sprite}"></img>
+        <div class="card__content">
+            <h1 class="card__heading">${pokemon.name}</h1>
+            <p class="card__text">${pokemon.name} (#${pokemon.id}) is a ${pokemon.types} type pokemon.</p>
     </div>`
-
+});
 
 
 
