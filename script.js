@@ -2,10 +2,6 @@ import { pokemonArray } from './data/pokemon.js'
 
 const cardContainer = document.querySelector(".card-container")
 
-/* const section = document.createElement("div");
-section.className = "filterSection";
- */
-
 pokemonArray.forEach(pokemon => {
 let type = pokemon.types.join(' & ')
 let name = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
